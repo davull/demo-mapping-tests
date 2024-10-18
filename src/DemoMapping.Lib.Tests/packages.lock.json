@@ -59,6 +59,12 @@
         "resolved": "2.9.2",
         "contentHash": "bzxrKRk1rm2ro//ElUS8MEejvOjYIpXHbt3XrziYBrY9qgqeOb6ULELRshts3M7N6V+wtuRb78u9GJZjqASVdQ=="
       },
+      "xunit.runner.msbuild": {
+        "type": "Direct",
+        "requested": "[2.9.2, )",
+        "resolved": "2.9.2",
+        "contentHash": "NRibZLMV9VYSYSa9F5JaV6Tp2MO0Y5WpqUEzj03pGEzRYPL/SzrJW9RqtafQ3Kkqc8EMcxsaYKWU9FNsA6NBDw=="
+      },
       "Bogus": {
         "type": "Transitive",
         "resolved": "31.0.3",
