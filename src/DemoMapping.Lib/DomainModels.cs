@@ -11,7 +11,7 @@ public class NameModel
 {
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
-    //public bool Verified { get; set; }
+    public bool Verified { get; set; }
 }
 
 public class UserModel

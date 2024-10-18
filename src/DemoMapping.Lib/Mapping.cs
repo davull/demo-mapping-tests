@@ -33,7 +33,8 @@ public static class Mapping
             Name = new NameModel
             {
                 FirstName = entity.FirstName,
-                LastName = entity.LastName
+                LastName = entity.LastName,
+                Verified = entity.NameVerified
             },
             Roles = entity.Roles
                 .Select(r => r.ToDomainModel())
@@ -49,12 +50,12 @@ public static class Mapping
             UserName = model.UserName,
             FirstName = model.Name.FirstName,
             LastName = model.Name.LastName,
+            NameVerified = model.Name.Verified,
             Email = model.Email,
             Roles = model.Roles
                 .Select(r => r.ToEntity())
                 .ToArray(),
-            LastChanged = DateTimeOffset.UtcNow,
-            //IsDeleted =
+            LastChanged = DateTimeOffset.UtcNow
         };
     }
 }

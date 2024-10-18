@@ -3,45 +3,47 @@
     "UserName": "functionalities",
     "FirstName": "throughput",
     "LastName": "collaborative",
-    "Email": "haptic",
+    "NameVerified": true,
+    "Email": "Niger",
     "Roles": [
       {
-        "RoleName": "withdrawal",
-        "Description": "e-business",
-        "Id": 75,
-        "LastChanged": "2024-10-18T07:18:33.8803785+02:00",
+        "RoleName": "Graphical User Interface",
+        "Description": "XSS",
+        "Id": 69,
+        "LastChanged": "2024-10-18T09:51:51.1281658+02:00",
         "IsDeleted": true
       },
       {
-        "RoleName": "Ergonomic",
-        "Description": "Soft",
-        "Id": 13,
-        "LastChanged": "2024-10-18T08:30:47.7571154+02:00",
+        "RoleName": "Rustic",
+        "Description": "quantify",
+        "Id": 64,
+        "LastChanged": "2024-10-18T18:46:35.2203728+02:00",
         "IsDeleted": true
       }
     ],
-    "Id": 40,
-    "LastChanged": "2024-10-18T02:22:22.1041734+02:00",
+    "Id": 90,
+    "LastChanged": "2024-10-18T05:51:22.7574057+02:00",
     "IsDeleted": true
   },
   "model": {
-    "Id": 40,
+    "Id": 90,
     "UserName": "functionalities",
-    "Email": "haptic",
+    "Email": "Niger",
     "Name": {
       "FirstName": "throughput",
-      "LastName": "collaborative"
+      "LastName": "collaborative",
+      "Verified": true
     },
     "Roles": [
       {
-        "Id": 75,
-        "RoleName": "withdrawal",
-        "Description": "e-business"
+        "Id": 69,
+        "RoleName": "Graphical User Interface",
+        "Description": "XSS"
       },
       {
-        "Id": 13,
-        "RoleName": "Ergonomic",
-        "Description": "Soft"
+        "Id": 64,
+        "RoleName": "Rustic",
+        "Description": "quantify"
       }
     ]
   }
