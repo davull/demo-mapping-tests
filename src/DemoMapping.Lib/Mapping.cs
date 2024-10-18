@@ -30,6 +30,7 @@ public static class Mapping
             Id = entity.Id,
             UserName = entity.UserName,
             Email = entity.Email,
+            IsActivated = entity.IsActivated,
             Name = new NameModel
             {
                 FirstName = entity.FirstName,
@@ -52,6 +53,7 @@ public static class Mapping
             LastName = model.Name.LastName,
             NameVerified = model.Name.Verified,
             Email = model.Email,
+            IsActivated = model.IsActivated,
             Roles = model.Roles
                 .Select(r => r.ToEntity())
                 .ToArray(),

@@ -21,4 +21,5 @@ public class UserEntity : EntityBase
     public bool NameVerified { get; set; }
     public string Email { get; set; } = string.Empty;
     public RoleEntity[] Roles { get; set; } = [];
+    public bool IsActivated { get; set; }
 }

@@ -21,5 +21,5 @@ public class UserModel
     public string Email { get; set; } = string.Empty;
     public NameModel Name { get; set; } = new();
     public RoleModel[] Roles { get; set; } = [];
-    //public bool IsActivated { get; set; }
+    public bool IsActivated { get; set; }
 }

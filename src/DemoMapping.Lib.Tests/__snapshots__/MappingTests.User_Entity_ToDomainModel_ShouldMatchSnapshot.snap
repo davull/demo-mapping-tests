@@ -10,23 +10,24 @@
         "RoleName": "Graphical User Interface",
         "Description": "XSS",
         "Id": 69,
-        "LastChanged": "2024-10-18T09:51:51.1281658+02:00",
+        "LastChanged": "2024-10-18T09:53:26.6084721+02:00",
         "IsDeleted": true
       },
       {
         "RoleName": "Rustic",
         "Description": "quantify",
         "Id": 64,
-        "LastChanged": "2024-10-18T18:46:35.2203728+02:00",
+        "LastChanged": "2024-10-18T18:48:10.7006661+02:00",
         "IsDeleted": true
       }
     ],
-    "Id": 90,
-    "LastChanged": "2024-10-18T05:51:22.7574057+02:00",
+    "IsActivated": true,
+    "Id": 76,
+    "LastChanged": "2024-10-18T12:00:19.92143+02:00",
     "IsDeleted": true
   },
   "model": {
-    "Id": 90,
+    "Id": 76,
     "UserName": "functionalities",
     "Email": "Niger",
     "Name": {
@@ -45,6 +46,7 @@
         "RoleName": "Rustic",
         "Description": "quantify"
       }
-    ]
+    ],
+    "IsActivated": true
   }
 }
