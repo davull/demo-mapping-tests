@@ -1,0 +1,48 @@
+﻿{
+  "entity": {
+    "UserName": "functionalities",
+    "FirstName": "throughput",
+    "LastName": "collaborative",
+    "Email": "haptic",
+    "Roles": [
+      {
+        "RoleName": "withdrawal",
+        "Description": "e-business",
+        "Id": 75,
+        "LastChanged": "2024-10-18T07:18:33.8803785+02:00",
+        "IsDeleted": true
+      },
+      {
+        "RoleName": "Ergonomic",
+        "Description": "Soft",
+        "Id": 13,
+        "LastChanged": "2024-10-18T08:30:47.7571154+02:00",
+        "IsDeleted": true
+      }
+    ],
+    "Id": 40,
+    "LastChanged": "2024-10-18T02:22:22.1041734+02:00",
+    "IsDeleted": true
+  },
+  "model": {
+    "Id": 40,
+    "UserName": "functionalities",
+    "Email": "haptic",
+    "Name": {
+      "FirstName": "throughput",
+      "LastName": "collaborative"
+    },
+    "Roles": [
+      {
+        "Id": 75,
+        "RoleName": "withdrawal",
+        "Description": "e-business"
+      },
+      {
+        "Id": 13,
+        "RoleName": "Ergonomic",
+        "Description": "Soft"
+      }
+    ]
+  }
+}

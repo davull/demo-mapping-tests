@@ -1,0 +1,14 @@
+﻿{
+  "entity": {
+    "RoleName": "functionalities",
+    "Description": "throughput",
+    "Id": 81,
+    "LastChanged": "2024-10-18T11:12:58.4748821+02:00",
+    "IsDeleted": true
+  },
+  "model": {
+    "Id": 81,
+    "RoleName": "functionalities",
+    "Description": "throughput"
+  }
+}

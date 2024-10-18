@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMapping.Lib", "DemoMapping.Lib\DemoMapping.Lib.csproj", "{49F4FF42-A294-48F5-AC59-184554C5961B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoMapping.Lib.Tests", "DemoMapping.Lib.Tests\DemoMapping.Lib.Tests.csproj", "{47237198-69C4-4DCB-9C39-8E27B7EDBC54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49F4FF42-A294-48F5-AC59-184554C5961B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F4FF42-A294-48F5-AC59-184554C5961B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F4FF42-A294-48F5-AC59-184554C5961B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F4FF42-A294-48F5-AC59-184554C5961B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47237198-69C4-4DCB-9C39-8E27B7EDBC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47237198-69C4-4DCB-9C39-8E27B7EDBC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47237198-69C4-4DCB-9C39-8E27B7EDBC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47237198-69C4-4DCB-9C39-8E27B7EDBC54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
