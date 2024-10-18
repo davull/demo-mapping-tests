@@ -1,0 +1,56 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  - name: BuildContainerImage
+    value: davidullrich/azurepipelineagent:node-22
+  - name: Projects
+    value: "src/*/*.csproj"
+  - name: TestProjects
+    value: "src/*/*.Tests.csproj"
+
+# https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/hosted
+pool:
+  name: Self-hosted
+
+container:
+  image: $(BuildContainerImage)
+
+steps:
+  # Checkout repository
+  # https://learn.microsoft.com/en-us/azure/devops/pipelines/yaml-schema/steps-checkout
+  - checkout: self
+    displayName: Checkout repository
+    clean: "true"
+
+  # Use dotnet
+  - task: UseDotNet@2
+    displayName: Use dotnet 8.x
+    inputs:
+      version: 8.x
+
+  # Restore dependencies
+  - task: DotNetCoreCLI@2
+    displayName: Restore dependencies
+    inputs:
+      command: restore
+      projects: $(Projects)
+      arguments: "--locked-mode"
+
+  # Build
+  - task: DotNetCoreCLI@2
+    displayName: Build
+    inputs:
+      command: build
+      projects: $(Projects)
+      arguments: "--no-restore"
+
+  # Test
+  - task: DotNetCoreCLI@2
+    displayName: Test
+    inputs:
+      command: test
+      projects: $(TestProjects)
+      arguments: --no-restore --no-build
