@@ -1,12 +1,10 @@
-﻿using AutoBogus;
-using Bogus;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Snapshooter.Xunit;
 using Xunit;
 
 namespace DemoMapping.Lib.Tests;
 
-public class MappingTests : TestBase
+public class MappingTests : MappingTestBase
 {
     [Fact]
     public void Role_Entity_ToDomainModel_ShouldMatchSnapshot()
@@ -70,43 +68,5 @@ public class MappingTests : TestBase
         var target = source.ToEntity().ToDomainModel();
 
         source.Should().BeEquivalentTo(target);
-    }
-
-    private static T AutoFake<T>() where T : class
-    {
-        Faker.DefaultStrictMode = true;
-        Randomizer.Seed = new Random(1234);
-
-        var autoFaker = AutoFaker.Create(builder =>
-        {
-            builder
-                .WithRepeatCount(2)
-                .WithOverride(new BoolAutoGeneratorOverride())
-                .WithOverride(new IntAutoGeneratorOverride());
-        });
-
-        return autoFaker.Generate<T>();
-    }
-
-    public class BoolAutoGeneratorOverride : AutoGeneratorOverride
-    {
-        public override bool CanOverride(AutoGenerateContext context)
-            => context.GenerateType == typeof(bool);
-
-        public override void Generate(AutoGenerateOverrideContext context)
-        {
-            context.Instance = true;
-        }
-    }
-
-    public class IntAutoGeneratorOverride : AutoGeneratorOverride
-    {
-        public override bool CanOverride(AutoGenerateContext context)
-            => context.GenerateType == typeof(int);
-
-        public override void Generate(AutoGenerateOverrideContext context)
-        {
-            context.Instance = context.Faker.Random.Number(1, 100);
-        }
     }
 }

@@ -10,20 +10,20 @@
         "RoleName": "Graphical User Interface",
         "Description": "XSS",
         "Id": 69,
-        "LastChanged": "2024-10-18T09:53:26.6084721+02:00",
+        "LastChanged": "2024-10-18T09:57:58.6855412+02:00",
         "IsDeleted": true
       },
       {
         "RoleName": "Rustic",
         "Description": "quantify",
         "Id": 64,
-        "LastChanged": "2024-10-18T18:48:10.7006661+02:00",
+        "LastChanged": "2024-10-18T18:52:42.7777417+02:00",
         "IsDeleted": true
       }
     ],
     "IsActivated": true,
     "Id": 76,
-    "LastChanged": "2024-10-18T12:00:19.92143+02:00",
+    "LastChanged": "2024-10-18T12:04:51.9983346+02:00",
     "IsDeleted": true
   },
   "model": {

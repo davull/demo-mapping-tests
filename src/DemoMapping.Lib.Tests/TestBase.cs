@@ -2,7 +2,7 @@
 
 namespace DemoMapping.Lib.Tests;
 
-public class TestBase : IAsyncLifetime
+public abstract class TestBase : IAsyncLifetime
 {
     static TestBase()
     {
