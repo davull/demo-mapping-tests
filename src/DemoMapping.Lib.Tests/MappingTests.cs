@@ -31,7 +31,7 @@ public class MappingTests : MappingTestBase
     }
 
     public static IEnumerable<object[]> RoleEntitySource()
-        => AutoFakes<RoleEntity>(Count).Select(e => new object[] { e });
+        => AutoFakeTestSource<RoleEntity>(Count);
 
     [Theory]
     [MemberData(nameof(RoleModelSource))]
@@ -42,7 +42,7 @@ public class MappingTests : MappingTestBase
     }
 
     public static IEnumerable<object[]> RoleModelSource()
-        => AutoFakes<RoleModel>(Count.Select(e => new object[] { e });
+        => AutoFakeTestSource<RoleModel>(Count);
 
     [Fact]
     public void User_Entity_ToDomainModel_ShouldMatchSnapshot()
@@ -69,7 +69,7 @@ public class MappingTests : MappingTestBase
     }
 
     public static IEnumerable<object[]> UserEntitySource()
-        => AutoFakes<UserEntity>(Count).Select(e => new object[] { e });
+        => AutoFakeTestSource<UserEntity>(Count);
 
     [Theory]
     [MemberData(nameof(UserModelSource))]
@@ -81,5 +81,5 @@ public class MappingTests : MappingTestBase
     }
 
     public static IEnumerable<object[]> UserModelSource()
-        => AutoFakes<UserModel>(Count).Select(e => new object[] { e });
+        => AutoFakeTestSource<UserModel>(Count);
 }
