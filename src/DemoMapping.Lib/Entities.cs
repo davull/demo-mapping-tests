@@ -1,4 +1,6 @@
-﻿namespace DemoMapping.Lib;
+﻿using System.Diagnostics;
+
+namespace DemoMapping.Lib;
 
 public abstract class EntityBase
 {
@@ -7,6 +9,7 @@ public abstract class EntityBase
      public bool IsDeleted { get; set; }
 }
 
+[DebuggerDisplay("{Id}, {RoleName}")]
 public class RoleEntity : EntityBase
 {
     public string RoleName { get; set; } = string.Empty;

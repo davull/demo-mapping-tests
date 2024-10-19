@@ -5,11 +5,14 @@ namespace DemoMapping.Lib.Tests;
 
 public abstract class MappingTestBase : TestBase
 {
-    protected static T AutoFake<T>() where T : class
+    protected MappingTestBase()
     {
         Faker.DefaultStrictMode = true;
         Randomizer.Seed = new Random(1234);
+    }
 
+    protected static List<T> AutoFakes<T>(int count) where T : class
+    {
         var autoFaker = AutoFaker.Create(builder =>
         {
             builder
@@ -19,8 +22,11 @@ public abstract class MappingTestBase : TestBase
                 .WithOverride(new IntAutoGeneratorOverride());
         });
 
-        return autoFaker.Generate<T>();
+        return autoFaker.Generate<T>(count);
     }
+
+    protected static T AutoFake<T>() where T : class
+        => AutoFakes<T>(1).Single();
 
     private class BoolAutoGeneratorOverride : AutoGeneratorOverride
     {

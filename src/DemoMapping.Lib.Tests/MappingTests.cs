@@ -6,6 +6,8 @@ namespace DemoMapping.Lib.Tests;
 
 public class MappingTests : MappingTestBase
 {
+    private const int Count = 10;
+
     [Fact]
     public void Role_Entity_ToDomainModel_ShouldMatchSnapshot()
     {
@@ -17,10 +19,10 @@ public class MappingTests : MappingTestBase
             .IgnoreField("**.LastChanged"));
     }
 
-    [Fact]
-    public void Role_Entity_DomainModel_Roundtrip()
+    [Theory]
+    [MemberData(nameof(RoleEntitySource))]
+    public void Role_Entity_DomainModel_Roundtrip(RoleEntity source)
     {
-        var source = AutoFake<RoleEntity>();
         var target = source.ToDomainModel().ToEntity();
 
         source.Should().BeEquivalentTo(target, opt => opt
@@ -28,14 +30,19 @@ public class MappingTests : MappingTestBase
             .Excluding(e => e.IsDeleted));
     }
 
-    [Fact]
-    public void Role_DomainModel_Entity_Roundtrip()
-    {
-        var source = AutoFake<RoleModel>();
-        var target = source.ToEntity().ToDomainModel();
+    public static IEnumerable<object[]> RoleEntitySource()
+        => AutoFakes<RoleEntity>(Count).Select(e => new object[] { e });
 
+    [Theory]
+    [MemberData(nameof(RoleModelSource))]
+    public void Role_DomainModel_Entity_Roundtrip(RoleModel source)
+    {
+        var target = source.ToEntity().ToDomainModel();
         source.Should().BeEquivalentTo(target);
     }
+
+    public static IEnumerable<object[]> RoleModelSource()
+        => AutoFakes<RoleModel>(Count.Select(e => new object[] { e });
 
     [Fact]
     public void User_Entity_ToDomainModel_ShouldMatchSnapshot()
@@ -48,10 +55,10 @@ public class MappingTests : MappingTestBase
             .IgnoreField("**.LastChanged"));
     }
 
-    [Fact]
-    public void User_Entity_DomainModel_Roundtrip()
+    [Theory]
+    [MemberData(nameof(UserEntitySource))]
+    public void User_Entity_DomainModel_Roundtrip(UserEntity source)
     {
-        var source = AutoFake<UserEntity>();
         var target = source.ToDomainModel().ToEntity();
 
         source.Should().BeEquivalentTo(target, opt => opt
@@ -61,12 +68,18 @@ public class MappingTests : MappingTestBase
             .For(e => e.Roles).Exclude(r => r.IsDeleted));
     }
 
-    [Fact]
-    public void User_DomainModel_Entity_Roundtrip()
+    public static IEnumerable<object[]> UserEntitySource()
+        => AutoFakes<UserEntity>(Count).Select(e => new object[] { e });
+
+    [Theory]
+    [MemberData(nameof(UserModelSource))]
+    public void User_DomainModel_Entity_Roundtrip(UserModel source)
     {
-        var source = AutoFake<UserModel>();
         var target = source.ToEntity().ToDomainModel();
 
         source.Should().BeEquivalentTo(target);
     }
+
+    public static IEnumerable<object[]> UserModelSource()
+        => AutoFakes<UserModel>(Count).Select(e => new object[] { e });
 }
