@@ -6,7 +6,7 @@ namespace DemoMapping.Lib.Tests;
 
 public class MappingTests : MappingTestBase
 {
-    private const int Count = 10;
+    private const int Count = 100;
 
     [Fact]
     public void Role_Entity_ToDomainModel_ShouldMatchSnapshot()
